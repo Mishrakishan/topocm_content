@@ -203,14 +203,14 @@ H(k)_{ll'}=\sum_{m}H_{(l,-m),(l',0)}e^{-i k m}.
 $$
 
 The Bloch equation written above is an eigenvalue problem at any momentum $k$. 
-The resulting eigenvalues $E^{(n)}(k)$ consitute the bandstructure of a material, where the eigenvalue label $n$ is also called a band index. 
+The resulting eigenvalues $E^{(n)}(k)$ constitute the bandstructure of a material, where the eigenvalue label $n$ is also called a band index. 
 
 #### Example: Su-Schrieffer-Heeger model
 
 Let us now work through an example. 
 The Su-Schrieffer-Heeger (SSH) model is the simplest model for polyacetylene, which to a physicist can be thought of as a chain of atoms with one orbital per atom.
 However, the hopping strength alternates (corresponding to the alternating bond-length ) between $t_1$ and $t_2$.
-Ususally you could assume that since each orbital has one atom there is only one atom per unit cell.
+Usually you could assume that since each orbital has one atom there is only one atom per unit cell.
 But this would mean all the atoms are identical. 
 On the other hand, in polyacetylene, half the atoms are on the right end of a short bond and half of them are on the left. 
 Thus there are two kinds of atoms - the former kind we label $R$ and the latter $L$. Thus there are two orbitals per unit cell that we label $|L,n\rangle$ and $|R,n\rangle$ with $n$ being the unit-cell label.
@@ -283,11 +283,11 @@ $$
 
 #### Discretizing continuum models for materials
 The series expansion of $H(k)$ that we discussed in the previous paragraph is a continuum description of a material. 
-This is because the series expansion is valid for small $k$ that is much smaller than the Brillouin zone. 
-The continuum Hamiltonian is obtained by replacing $k$ in the series expasion by $\hbar^{-1}p$, where $p=-i\hbar\partial_x$ is the momentum operator. 
+This is because the series expansion is valid for a small $k$ that is much smaller than the Brillouin zone. 
+The continuum Hamiltonian is obtained by replacing $k$ in the series expansion by $\hbar^{-1}p$, where $p=-i\hbar\partial_x$ is the momentum operator. 
 
 A continuum Hamiltonian is sometimes easier to work with analytically than the crystal lattice of orbitals.
-On the other hand, we need to discretize the continuum Hamiltonian to simulate it numerically. We can do this representing $k$ as a discrete derivative operator:
+On the other hand, we need to discretize the continuum Hamiltonian to simulate it numerically. We can do this by representing $k$ as a discrete derivative operator:
 
 $$
 k=-i\partial_x\approx -i(2\Lambda)^{-1}\sum_n (|n+1\rangle\langle n|-|n\rangle\langle n+1|).
@@ -297,7 +297,7 @@ The label $n$ is discrete-analogous to the unit-cell label, where the unit cell 
 To check that this is a representation of the derivative, apply $i k=\partial_x$ to $|\psi\rangle$ as $i k|\psi\rangle\approx \sum_n \frac{\psi_{n+1}-\psi_{n-1}}{2\Lambda}|n\rangle$. 
 In addition, we need to represent the $N\times N$ matrix structure of $H(k=0)$. 
 This is done by introducing label $a=1,\dots N$ so that the Hamiltonian is defined on a space labeled by $|a,n\rangle$.
-Applying these steps to the the $k\cdot p$ Hamiltonian takes the discrete form:
+Applying these steps to the $k\cdot p$ Hamiltonian takes the discrete form:
 
 $$
 H(k)\approx \sum_{n,a,b} H(k=0)_{ab}|a,n\rangle \langle b,n| +i H^{'}(k=0)_{ab}(|a,n+1\rangle\langle b,n|-|a,n\rangle\langle b,n+1|),
